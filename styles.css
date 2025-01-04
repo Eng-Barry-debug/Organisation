@@ -474,15 +474,15 @@ footer {
 
 .footer-socials {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     justify-content: flex-end;
     position: absolute;
     bottom: 1rem;
     right: 1rem;
 }
 .footer-socials svg {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     fill: currentColor; /* Matches the color of the parent element */
     transition: fill 0.3s ease; /* Smooth color change on hover */
 }
