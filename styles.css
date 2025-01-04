@@ -462,6 +462,15 @@ footer {
         gap: 2rem;
     }
 }
+/* 
+
+
+.footer-socials a {
+    text-decoration: none;
+    color: #fff; /* Applies color to text and SVG icons */
+    display: flex; /* Ensures SVG aligns correctly */
+    align-items: center;
+} */
 
 .footer-socials {
     display: flex;
@@ -471,14 +480,6 @@ footer {
     bottom: 1rem;
     right: 1rem;
 }
-
-.footer-socials a {
-    text-decoration: none;
-    color: #fff; /* Applies color to text and SVG icons */
-    display: flex; /* Ensures SVG aligns correctly */
-    align-items: center;
-}
-
 .footer-socials svg {
     width: 24px;
     height: 24px;
