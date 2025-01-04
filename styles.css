@@ -360,39 +360,85 @@ body {
 
 /* Contact Section */
 .contact {
-    padding: 5rem 0;
+    padding: 5rem 2rem;
     background: var(--light-bg);
-}
-
-.contact h2 {
+    font-family: Arial, sans-serif;
+  }
+  
+  .contact h2 {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
     color: var(--primary-color);
-}
-
-.contact-content {
+  }
+  
+  .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-}
-
-.contact-form {
+    gap: 3rem;
+  }
+  
+  .contact-info {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .contact-info .info-item {
+    display: flex;
+    align-items: center;
     gap: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 0.8rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+  }
+  
+  .contact-info .info-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.8rem 1rem;
     border: 1px solid #ddd;
     border-radius: 4px;
-}
-
-.contact-form textarea {
+    font-size: 1rem;
+  }
+  
+  .contact-form textarea {
     height: 150px;
-}
-
+    resize: none;
+  }
+  
+  .contact-form button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    color: red;
+    background: #13ac20;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+  
 /* Footer */
 footer {
     background: var(--primary-color);
@@ -402,6 +448,7 @@ footer {
 
 .footer-content {
     display: grid;
+    display: flex;
     grid-template-columns: 2fr 1fr;
     gap: 4rem;
     margin-bottom: 2rem;
@@ -411,6 +458,10 @@ footer {
     list-style: none;
 }
 
+.footer-links a:hover {
+    color: #ed8936;
+
+}
 .footer-links a {
     color: var(--white);
     text-decoration: none;
@@ -418,7 +469,9 @@ footer {
 }
 
 .footer-bottom {
-    text-align: center;
+    justify-content: space-between;
+    display: flex;
+    text-align: left;
     padding-top: 2rem;
     border-top: 1px solid rgba(255,255,255,0.1);
 }
@@ -470,28 +523,39 @@ footer {
 
 
 .footer-socials a {
-    text-decoration: none;
+    
     color: #fff; /* Applies color to text and SVG icons */
     display: flex; /* Ensures SVG aligns correctly */
     align-items: center;
 } */
 
 .footer-socials {
+    text-decoration: none;
     display: flex;
-    gap: 2rem;
+    gap: 3akerem;
     justify-content: flex-end;
     position: absolute;
     bottom: 1rem;
     right: 1rem;
+    margin: 10px 0px px 0px;
+    padding: 0px 0px 0px 0px;
 }
 .footer-socials svg {
     width: 28px;
     height: 28px;
-    fill: currentColor; /* Matches the color of the parent element */
+    fill: #ffffff; 
     transition: fill 0.3s ease; /* Smooth color change on hover */
 }
 
 .footer-socials a:hover svg {
     fill: #007bff; /* Changes the icon color on hover */
 } */
+
+.footer-bottom img{
+    align-items: right;
+}
+.separator {
+    padding: 0 10px 10px 20px;
+}
+
 
