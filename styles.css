@@ -23,13 +23,13 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    /* padding: 0 20px; */
 }
 
 /* Navigation */
 .navbar {
     background: linear-gradient(rgba(66, 204, 100, 0.9), rgba(26, 93, 35, 0.9));
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(233, 7, 7, 0.1);
     position: fixed;
     width: 100%;
     top: 0;
@@ -39,15 +39,25 @@ body {
 .navbar .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
+    align-items: right;
+    /* padding: 1rem 0; */
 }
 
+
 .logo {
+    display: flex;
+    align-items: center; /* Vertically align the image and text */
+    gap: 0.5rem; /* Slightly adjust the space between the image and text */
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
     text-decoration: none;
+}
+
+.logo img {
+    height: 35px; /* Make the image a bit smaller for better alignment */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 0.5rem; /* Add a bit of space after the logo image */
 }
 
 .nav-links {
@@ -490,3 +500,4 @@ footer {
 .footer-socials a:hover svg {
     fill: #007bff; /* Changes the icon color on hover */
 } */
+
