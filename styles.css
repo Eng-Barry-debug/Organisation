@@ -54,12 +54,6 @@ body {
     text-decoration: none;
 }
 
-.logo img {
-    height: 35px; /* Make the image a bit smaller for better alignment */
-    width: auto; /* Maintain aspect ratio */
-    margin-right: 0.5rem; /* Add a bit of space after the logo image */
-}
-
 .nav-links {
     display: flex;
     list-style: none;
