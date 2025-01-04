@@ -26,6 +26,63 @@ body {
     /* padding: 0 20px; */
 }
 
+/* Responsive Design for Phones */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Adjust base font size */
+    }
+
+    .navbar .container {
+        flex-direction: column; /* Stack logo and nav links */
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack video and text */
+        text-align: center; /* Center-align text */
+    }
+
+    .impact-grid, .program-cards {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .officials-content {
+        width: 300%; /* Adjust scroll width for smaller viewports */
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Stack footer sections */
+    }
+
+    .footer-socials {
+        justify-content: center; /* Center social icons */
+        position: relative; /* Adjust positioning */
+        bottom: auto;
+        right: auto;
+    }
+
+    .contact-form button {
+        padding: 1rem; /* Adjust button padding */
+        font-size: 1rem;
+    }
+}
+
 /* Navigation */
 .navbar {
     background: linear-gradient(rgba(66, 204, 100, 0.9), rgba(26, 93, 35, 0.9));

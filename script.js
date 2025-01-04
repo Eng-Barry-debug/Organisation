@@ -81,3 +81,24 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.impact-number').forEach(number => {
     observer.observe(number);
 });
+
+// Handle touch events for manual scrolling
+officialsContent.addEventListener('touchstart', (e) => {
+    isMouseDown = true;
+    startX = e.touches[0].pageX - officialsContent.getBoundingClientRect().left;
+    scrollLeft = officialsContent.scrollLeft;
+    isPaused = true; // Pause auto-scroll on touch
+});
+
+officialsContent.addEventListener('touchend', () => {
+    isMouseDown = false;
+    isPaused = false; // Resume auto-scroll on touch end
+});
+
+officialsContent.addEventListener('touchmove', (e) => {
+    if (!isMouseDown) return;
+    e.preventDefault();
+    const x = e.touches[0].pageX - officialsContent.getBoundingClientRect().left;
+    const walk = (x - startX) * 3;
+    officialsContent.scrollLeft = scrollLeft - walk;
+});
