@@ -26,66 +26,60 @@ body {
     /* padding: 0 20px; */
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%; /* Ensures navbar fits the viewport width */
-        padding: 1rem;
+/* Responsive Design for Phones */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Adjust base font size */
     }
 
     .navbar .container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%; /* Makes sure the navbar content fits the viewport */
+        flex-direction: column; /* Stack logo and nav links */
     }
 
-    .mobile-menu-btn {
-        display: block;
-        background: none;
-        border: none;
-        cursor: pointer;
-        position: relative;
+    .hero h1 {
+        font-size: 2rem;
     }
 
-    .mobile-menu-btn span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background: var(--primary-color);
-        margin: 5px 0;
-        transition: all 0.3s ease;
+    .hero p {
+        font-size: 1rem;
     }
 
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--white);
+    .hero-buttons {
         flex-direction: column;
-        width: 100%; /* Ensures the dropdown spans the entire width */
-        padding: 1rem 0;
-        text-align: center;
-        z-index: 999; /* Stays above other elements */
+        gap: 0.5rem;
     }
 
-    .nav-links.active {
-        display: flex;
+    .about-content {
+        flex-direction: column; /* Stack video and text */
+        text-align: center; /* Center-align text */
     }
 
-    .nav-links a {
-        padding: 0.5rem 1rem; /* Adjust link padding */
+    .impact-grid, .program-cards {
+        grid-template-columns: 1fr; /* Single column layout */
     }
 
-    .logo {
-        flex-grow: 1;
-        text-align: left;
+    .officials-content {
+        width: 300%; /* Adjust scroll width for smaller viewports */
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Stack footer sections */
+    }
+
+    .footer-socials {
+        justify-content: center; /* Center social icons */
+        position: relative; /* Adjust positioning */
+        bottom: auto;
+        right: auto;
+    }
+
+    .contact-form button {
+        padding: 1rem; /* Adjust button padding */
+        font-size: 1rem;
     }
 }
 
