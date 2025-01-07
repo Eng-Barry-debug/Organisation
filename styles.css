@@ -27,11 +27,21 @@ body {
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%; /* Ensures navbar fits the viewport width */
+        padding: 1rem;
+    }
+
     .navbar .container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        width: 100%; /* Makes sure the navbar content fits the viewport */
     }
 
     .mobile-menu-btn {
@@ -59,13 +69,23 @@ body {
         right: 0;
         background: var(--white);
         flex-direction: column;
+        width: 100%; /* Ensures the dropdown spans the entire width */
         padding: 1rem 0;
         text-align: center;
-        z-index: 999; /* Ensure it's above other content */
+        z-index: 999; /* Stays above other elements */
     }
 
     .nav-links.active {
         display: flex;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 1rem; /* Adjust link padding */
+    }
+
+    .logo {
+        flex-grow: 1;
+        text-align: left;
     }
 }
 
