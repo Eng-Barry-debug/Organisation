@@ -26,60 +26,46 @@ body {
     /* padding: 0 20px; */
 }
 
-/* Responsive Design for Phones */
-@media (max-width: 480px) {
-    body {
-        font-size: 14px; /* Adjust base font size */
-    }
-
+@media (max-width: 768px) {
     .navbar .container {
-        flex-direction: column; /* Stack logo and nav links */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .hero h1 {
-        font-size: 2rem;
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: relative;
     }
 
-    .hero p {
-        font-size: 1rem;
+    .mobile-menu-btn span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: var(--primary-color);
+        margin: 5px 0;
+        transition: all 0.3s ease;
     }
 
-    .hero-buttons {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
         flex-direction: column;
-        gap: 0.5rem;
+        padding: 1rem 0;
+        text-align: center;
+        z-index: 999; /* Ensure it's above other content */
     }
 
-    .about-content {
-        flex-direction: column; /* Stack video and text */
-        text-align: center; /* Center-align text */
-    }
-
-    .impact-grid, .program-cards {
-        grid-template-columns: 1fr; /* Single column layout */
-    }
-
-    .officials-content {
-        width: 300%; /* Adjust scroll width for smaller viewports */
-    }
-
-    .contact-content {
-        grid-template-columns: 1fr; /* Single column layout */
-    }
-
-    .footer-content {
-        flex-direction: column; /* Stack footer sections */
-    }
-
-    .footer-socials {
-        justify-content: center; /* Center social icons */
-        position: relative; /* Adjust positioning */
-        bottom: auto;
-        right: auto;
-    }
-
-    .contact-form button {
-        padding: 1rem; /* Adjust button padding */
-        font-size: 1rem;
+    .nav-links.active {
+        display: flex;
     }
 }
 
